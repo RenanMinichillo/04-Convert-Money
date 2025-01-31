@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Conversor de Moedas</title>
+</head>
+
+<body>
+    <main>
+        <section class="currency-container">
+            <div class="currency-selection">
+                <label for="currency-from">Converter <b>de</b></label>
+                <select id="currency-from">
+                    <optgroup label="Moeda">
+                        <option value="real">R$ Real</option>
+                        <option value="dolar">US$ Dólar</option>
+                        <option value="euro">€ Euro</option>
+                        <option value="libra">£ Libra</option>
+                        <option value="yene">¥ Yene</option>
+                        <option value="won">₩ Won</option>
+                    </optgroup>
+                    <optgroup label="Cripto">
+                        <option value="bitcoin">BTC Bitcoin</option>
+                    </optgroup>
+                </select>
+
+                <label for="currency-to">Converter <b>para</b></label>
+                <select id="currency-to">
+                    <optgroup label="Moeda">
+                        <option value="real">R$ Real</option>
+                        <option value="dolar">US$ Dólar</option>
+                        <option value="euro">€ Euro</option>
+                        <option value="libra">£ Libra</option>
+                        <option value="yene">¥ Yene</option>
+                        <option value="won">₩ Won</option>
+                    </optgroup>
+                    <optgroup label="Cripto">
+                        <option value="bitcoin">BTC Bitcoin</option>
+                    </optgroup>
+                </select>
+
+                <label for="currency-value"><b>Valor</b></label>
+                <input type="text" placeholder="Digite o valor" id="currency-value" required>
+
+                <button type="button" id="btn-convert">Converter</button>
+            </div><!-- currency-selection -->
+
+            <div class="currency-result">
+                <figure>
+                    <img src="img/brasil.png" alt="moeda real" class="flag">
+                    <figcaption>R$ Real</figcaption>
+                    <p>R$ 10.000,00</p>
+                </figure>
+
+                <img src="img/seta.png" alt="seta" id="arrow">
+
+                <figure>
+                    <img src="img/estados-unidos.png" alt="moeda dólar" class="flag">
+                    <figcaption>US$ Dólar</figcaption>
+                    <p>US$ 2.000,00</p>
+                </figure>
+            </div><!-- currency-result -->
+        </section><!-- currency-container -->
+    </main>
+</body>
+
+</html>
