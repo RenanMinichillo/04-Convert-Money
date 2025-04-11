@@ -4,68 +4,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="script.js" defer></script>
-    <title>Conversor de Moedas</title>
+    <link rel="shortcut icon" href="../assets/favicon/favicon-convert-money.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Convert Money</title>
 </head>
 
 <body>
     <main>
-        <section class="converter-container">
-            <div class="converter-form">
-                <label for="currency-select-from">Converter <b>de</b></label>
-                <select id="currency-select-from">
-                    <optgroup label="Moeda">
-                        <option value="real" selected>R$ Real</option>
+        <section>
+            <div class="options-box">
+                <label for="convert-from">Converter de</label>
+                <select id="convert-from">
+                    <optgroup label="MOEDAS">
+                        <option value="real">R$ Real</option>
                         <option value="dolar">US$ Dólar</option>
                         <option value="euro">€ Euro</option>
+                        <option value="iene">¥ Iene</option>
                         <option value="libra">£ Libra</option>
-                        <option value="iene">¥ Yene</option>
-                        <option value="won">₩ Won</option>
                     </optgroup>
-                    <optgroup label="Cripto">
-                        <option value="bitcoin">BTC Bitcoin</option>
+                    <optgroup label="CRIPTOMOEDA">
+                        <option value="bitcoin">₿ Bitcoin</option>
                     </optgroup>
                 </select>
 
-                <label for="currency-select-to">Converter <b>para</b></label>
-                <select id="currency-select-to">
-                    <optgroup label="Moeda">
+                <label for="convert-to">Converter para</label>
+                <select id="convert-to">
+                    <optgroup label="MOEDAS">
                         <option value="real">R$ Real</option>
-                        <option value="dolar" selected>US$ Dólar</option>
+                        <option value="dolar">US$ Dólar</option>
                         <option value="euro">€ Euro</option>
+                        <option value="iene">¥ Iene</option>
                         <option value="libra">£ Libra</option>
-                        <option value="iene">¥ Yene</option>
-                        <option value="won">₩ Won</option>
                     </optgroup>
-                    <optgroup label="Cripto">
-                        <option value="bitcoin">BTC Bitcoin</option>
+                    <optgroup label="CRIPTOMOEDA">
+                        <option value="bitcoin">₿ Bitcoin</option>
                     </optgroup>
                 </select>
 
-                <label for="amount-input"><b>Valor</b></label>
-                <input type="text" placeholder="Digite o valor" id="amount-input" required>
+                <label for="currency-value">Valor</label>
+                <input id="currency-value" type="text" placeholder="R$ 10.000,00" inputmode="numeric" required>
 
-                <button type="button" id="convert-button">Converter</button>
-            </div><!-- converter-form -->
+                <button id="convert-button" type="button">Converter</button>
+            </div>
 
-            <div class="conversion-result">
-                <figure>
-                    <img src="img/real.png" alt="moeda real" class="flag convert">
-                    <figcaption id="currency-name-from">R$ Real</figcaption>
-                    <p id="currency-value-from">R$ 10.000,00</p>
-                </figure>
+            <div class="conversion-box">
+                <img class="currency-image image-convert" src="assets/img/real.png" alt="imagem da moeda atual">
+                <p class="currency-name name-convert">Real</p>
+                <p class="input-value">R$ 10.000,00</p>
 
-                <img src="img/seta.png" alt="seta" id="conversion-arrow">
+                <img class="conversion-arrow" src="assets/img/arrow.png" alt="imagem indicativa da conversão entre moedas">
 
-                <figure>
-                    <img src="img/dolar.png" alt="moeda dólar" class="flag converted">
-                    <figcaption id="currency-name-to">US$ Dólar</figcaption>
-                    <p id="currency-value-to">US$ 2.000,00</p>
-                </figure>
-            </div><!-- conversion-result -->
-        </section><!-- converter-container -->
+                <img class="currency-image image-converted" src="assets/img/dolar.png" alt="imagem da moeda convertida">
+                <p class="currency-name name-converted" >Dólar Americano</p>
+                <p class="output-value">$ 2.000,00</p>
+                <div class="rates-box">
+                    <span class="rates"></span>
+                </div>
+            </div>
+        </section>
     </main>
 </body>
+<script src="script.js"></script>
 
 </html>
